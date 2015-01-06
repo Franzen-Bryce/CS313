@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Basic Page</title>
     </head>
     <body>
-        Hello World!
+        <p>Hello World!</p>
     </body>
 </html>
