@@ -8,3 +8,15 @@ function appendText(){
     document.getElementById('div1').innerHTML += text;
 }
 
+function changeColor(){
+    var color = document.getElementById('textField1').value;
+    document.getElementById('div1').style.color = color;
+}
+
+function show(){
+    document.getElementById('div1').style.display = "block";
+}
+
+function hide(){
+    document.getElementById('div1').style.display = "none";
+}
