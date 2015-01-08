@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 function appendText(){
-    var text = document.getElementById('textField1').value;
-    document.getElementById('div1').innerHTML += text;
+   var text = $("#textField1").val();
+   $("#div1").append(text);
+//    var text = document.getElementById('textField1').value;
+//    document.getElementById('div1').innerHTML += text;
 }
 
 function changeColor(){
@@ -14,9 +16,11 @@ function changeColor(){
 }
 
 function show(){
-    document.getElementById('div1').style.display = "block";
+    $("#div1").fadeIn(2000);
+//    document.getElementById('div1').style.display = "block";
 }
 
 function hide(){
-    document.getElementById('div1').style.display = "none";
+    $("#div1").fadeOut(2000);
+//    document.getElementById('div1').style.display = "none";
 }
