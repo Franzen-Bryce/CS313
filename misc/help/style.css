@@ -1,0 +1,75 @@
+body{
+	margin: 0;
+	background-color: #f2f2f2;
+    font-family: sans-serif;
+	}
+
+#header {
+	background-color: #0F0F0A;
+	color: #FFFFFF;
+	height: 60px;
+	margin-top: -15px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	}
+	
+h1{
+	font-family: arial;
+	}
+	
+p{
+	margin-top: -3px;
+	font-family: arial;
+	}
+	
+#main {
+	padding-left: 50px;
+	}
+	
+#attribution {
+	display: block;
+	float: right;
+	margin-top: -30px;
+	margin-right: 30px;
+	color: white;
+	font-family: arial;
+	font-size: 10pt;
+	}
+	
+#phone{
+	display: block;
+	float: right;
+	margin-top: -53px;
+	margin-right: 30px;
+	color: white;
+	font-family: arial;
+	font-size: 14pt;
+	font-weight: 800;
+	}
+
+.helpButton{
+    height: 30px;
+    width: 500px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#buttonText{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+img{
+    display: inline;
+}
+
+h2{
+    display: inline;
+}
+    
