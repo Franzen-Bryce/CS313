@@ -25,7 +25,6 @@
             </div>
         </div>
         <!-- /.row -->
-
         <!-- Intro Content -->
         <div class="row">
             <div class="col-md-5">
@@ -33,13 +32,12 @@
             </div>
             <div class="col-md-6">
                 <h2>Bryce Franzen</h2>
-                <p>I am a student at Brigham Young University- Idaho majoring in website development.  I am proficient in HTML, CSS3, JavaScript, PHP, and MySQL, and I have some experience with JQuery.</p>
+                <p>I am a student at Brigham Young University- Idaho majoring in website development.  I am proficient in HTML, CSS3, JavaScript, PHP, and MySQL, and I have some experience with JQuery. </p>
                 <p>I married my wife Candice on July 25, 2014, and I currently live in Rexburg, Idaho.</p>
                 <p>I am a quick learner and I love learning new things.  I work well individually or in groups, both are fine with me.  I am good at working with people and communicating or presenting ideas.  I greatly enjoy problem solving, and I am always looking for new ways to make a task easier.</p>
             </div>
         </div>
         <!-- /.row -->
-
         <hr>
     </div>
     <!-- /.container -->

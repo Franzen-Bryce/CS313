@@ -47,7 +47,7 @@
                     <li>Administrator panel to edit site content</li>
                     <li>Built from the ground up without a framework</li>
                 </ul>
-                <a class="btn btn-primary" href="portfolio-pitCrew.php">View Project</i></a>
+                <a class="btn btn-primary" href="portfolio-pitCrew.php">View Project</a>
             </div>
         </div>
         <!-- /.row -->
@@ -71,7 +71,7 @@
                     <li>Database Integration</li>
                     <li>Built from the ground up without a framework</li>
                 </ul>
-                <a class="btn btn-primary" href="portfolio-tally.php">View Project</i></a>
+                <a class="btn btn-primary" href="portfolio-tally.php">View Project</a>
             </div>
         </div>
         <!-- /.row -->
@@ -96,7 +96,7 @@
                     <li>Complete user and content management</li>
                     <li>Built from the ground up without a framework</li>
                 </ul>
-                <a class="btn btn-primary" href="portfolio-sabuWorks.php">View Project</i></a>
+                <a class="btn btn-primary" href="portfolio-sabuWorks.php">View Project</a>
             </div>
         </div>
         <!-- /.row -->
@@ -112,7 +112,7 @@
                 <h3><b>Amanda Conley Photography</b></h3>
                 <h4>HTML5, CSS3, JavaScript, PHP</h4>
                 <p>Amanda Conley Photography is a site hosted through zenfolio.com, and custom web forms are not supported in their drag and drop design.  Amanda Conley contacted me to create custom web forms that would match her site's style scheme.  These web forms are hosted through my domain and included into her site through the implementation of iFrames.</p>
-                <a class="btn btn-primary" href="portfolio-amandaConley.php">View Project</i></a>
+                <a class="btn btn-primary" href="portfolio-amandaConley.php">View Project</a>
             </div>
         </div>
         <!-- /.row -->
