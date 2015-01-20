@@ -17,7 +17,7 @@
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
-            <div class="col-lg-12">    
+            <div class="col-lg-12">
                 <br>
                 <ol class="breadcrumb">
                     <li><a href="index.php">Home</a>
@@ -32,6 +32,7 @@
         <div class="row">
             <!-- Contact Details Column -->
             <div class="col-md-4">
+                <div class="row"  style="padding-left: 15px; padding-right: 15px;">
                 <h3>Bryce Franzen</h3>
                 <p>
                     Rexburg, ID 83440<br>
@@ -51,6 +52,14 @@
                 <a class="btn btn-social-icon btn-google-plus" href="https://plus.google.com/u/0/102447292539777214751/posts" target="_blank" style="float: left; margin-right: 10px; margin-left: 0px;">
                     <i class="fa fa-google-plus"></i>
                 </a>
+                <br><br>
+                </div>
+                <div class="row"  style="padding-left: 15px; padding-right: 15px;">
+            <!-- Map Column -->
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46051.89475206868!2d-111.78818289999998!3d43.83005045000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540a4b807a98b1%3A0x4a49d8d1d2181c73!2sRexburg%2C+ID!5e0!3m2!1sen!2sus!4v1420838214512"></iframe>
+        </div>
+        <!-- /.row -->
             </div>
             <div class="col-md-8">
                 <h3>Send Bryce a Message</h3>
@@ -90,14 +99,7 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <!-- Map Column -->
-            <div class="col-md-4" style="margin-top:-360px;">
-                <!-- Embedded Google Map -->
-                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46051.89475206868!2d-111.78818289999998!3d43.83005045000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540a4b807a98b1%3A0x4a49d8d1d2181c73!2sRexburg%2C+ID!5e0!3m2!1sen!2sus!4v1420838214512"></iframe>
-            </div>
-        </div>
-        <!-- /.row -->
+
 
         <hr>
 
@@ -107,8 +109,17 @@
     <!-- Footer -->
     <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
 
-    <!--Script Links-->
-    <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/script.php'; ?>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
 </body>
 
 </html>

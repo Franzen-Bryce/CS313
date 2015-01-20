@@ -18,11 +18,11 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Assignment 1</h1>
+                <h1 class="page-header">PHP Survey</h1>
                 <ol class="breadcrumb">
                     <li><a href="/">Home</a></li>
                     <li>Assignments</li>
-                    <li class="active">Assignment 1</li>
+                    <li class="active">PHP Survey</li>
                 </ol>
             </div>
         </div>
@@ -35,8 +35,40 @@
             
             <!-- Content Column -->
             <div class="col-md-9">
-                <h2>Assignment 1 (Coming Soon)</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
+                <h3>PHP Survey</h3>
+                    <form action="phpSurvey.php" role="form">
+                      <div class="form-group">
+                         <!--Full Name-->
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Full Name:</label>
+                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                           <!--Color-->
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Favorite Color:</label>
+                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your favorite color.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <!--Favorite Movie-->
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Favorite Movie:</label>
+                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your favorite movie.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+
+                            <div id="success"></div>
+                            <!-- For success/fail messages -->
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="button" href="" class="btn btn-">See Messages</button>
+                        </div>
+                    </form>
             </div>
         </div>
         <!-- /.row -->
