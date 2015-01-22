@@ -45,10 +45,10 @@ if(!$_SESSION){
                    <hr />
                     <form action="index.php" method="post">
                       <div class="form-group">
-                         <!--Full Name-->
+                         <!--Major-->
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label for="major">Select Your Major</label>
+                                    <label for="major">Select Your Major</label><br />
                                     <select class="form-control" name="major" required data-validation-required-message="Please select your major.">
                                         <option value="WDD">Website Design/Development</option>
                                         <option value="CIT">Computer Information Technology</option>

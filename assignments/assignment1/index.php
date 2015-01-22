@@ -149,7 +149,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -160,7 +160,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -172,7 +172,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -183,7 +183,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -195,7 +195,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -206,7 +206,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -218,7 +218,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
@@ -229,7 +229,7 @@ $output = "";
             </div>
             <div class='col-md-9'>
             <div class='progress'>
-              <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 2em; width: $value%;'>
+              <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='$value' aria-valuemin='0' aria-valuemax='100' style='min-width: 1em; width: $value%;'>
                 $value
               </div>
             </div></div>";
