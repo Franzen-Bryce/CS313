@@ -15,6 +15,12 @@ if ($_GET['action'] == "resetVotes"){
     exit;
 }
 
+if ($_GET['action'] == "resetSession"){ 
+    $_SESSION['voted'] = 'no';
+    header('Location: /assignments/assignment1/index.php');
+    exit;
+}
+
 if (($_POST['action'] == 'Submit Your Responses') || ($_GET['action'] == 'SeeOtherResponses')){
     $dataFile = unserialize(file_get_contents("formData.txt"));
 
