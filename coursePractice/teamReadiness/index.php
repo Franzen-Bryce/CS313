@@ -7,7 +7,7 @@
 </head>
 <body>
     <p><b>Username:</b> <br/><?php echo $_POST['name'] ?></p>
-    <p><b>Email:</b> <br/><?php echo $_POST['email'] ?></p>
+    <p><b>Email:</b> <br/><a href="mailto: <?php echo $_POST['email'] ?>"><?php echo $_POST['email'] ?></a></p>
     <p><b>Major:</b> <br/><?php echo $_POST['major'] ?></p>
     <p><b>Places Visited:</b> <br/><?php foreach ($visited as $value){
         if ($value != ""){

@@ -30,7 +30,7 @@
         <label for="comment"></label>  <br/>      
         <textarea name="comment" placeholder="Enter Your Comment Here..."></textarea>
         
-        <input type="submit" onsubmit="action">
+        <input type="submit">
         
     </form>
     

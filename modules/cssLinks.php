@@ -1,6 +1,10 @@
 <!-- Bootstrap Core CSS -->
 <link href="/css/bootstrap.css" rel="stylesheet"  type="text/css">
 
+
+<!--Personal Styles -->
+<link href="/css/personal-styles.css" rel="stylesheet"  type="text/css">
+
 <!-- Custom CSS -->
 <link href="/css/modern-business.css" rel="stylesheet"  type="text/css">
 

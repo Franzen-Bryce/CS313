@@ -1,5 +1,5 @@
 <div class="col-md-3">
     <div class="list-group">
-        <a href="/assignments/assignment1.php" class="list-group-item active">PHP Survey</a>
+        <a href="/assignments/assignment1" class="list-group-item <?php if($page == "assignment1"){echo "active";}?>">PHP Survey</a>
     </div>
 </div>

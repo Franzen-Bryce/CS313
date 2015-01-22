@@ -27,7 +27,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">CS313 Assignments <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li <?php if ($page == "assignment1"){echo "class='active'";}?>>
-                                <a href="/assignments/assignment1.php">PHP Survey</a>
+                                <a href="/assignments/assignment1">PHP Survey</a>
                             </li>
 <!--                            <li>
                                 <a href="sidebar.php">Assignment 2</a>
