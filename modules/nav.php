@@ -29,6 +29,9 @@
                             <li <?php if ($page == "assignment1"){echo "class='active'";}?>>
                                 <a href="/assignments/assignment1">PHP Survey</a>
                             </li>
+                            <li <?php if ($page == "thePitCrew"){echo "class='active'";}?>>
+                                <a href="/assignments/thePitCrew">PHP Database Interaction (The Pit Crew Automotive)</a>
+                            </li>
 <!--                            <li>
                                 <a href="sidebar.php">Assignment 2</a>
                             </li>-->
