@@ -4,7 +4,7 @@ h1 {
 	padding-left: 1px;
 }
 
-input {
+#search {
 	background: #223454;
 	border: none;
 	padding: 5px;
@@ -12,11 +12,28 @@ input {
 	float: right;
 }
 
-input:-moz-placeholder {
+#search:-moz-placeholder {
 	color: #fff;
 }
 
 #submit {
 	background: #2d2d2d;
 	color: #fff;
+}
+
+label {
+	display: block;
+	padding-top: 10px;
+	font-weight: 500;
+	font-family: helvetica;
+}
+
+.left {
+	width: 30%;
+	float: left;
+}
+
+.right {
+	width: 50%;
+	float: left;
 }
