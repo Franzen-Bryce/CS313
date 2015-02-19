@@ -3036,6 +3036,8 @@ fieldset[disabled] .btn-warning.active {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .btn-danger:hover,
 .btn-danger:focus,

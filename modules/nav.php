@@ -32,9 +32,9 @@
                             <li <?php if ($page == "thePitCrew"){echo "class='active'";}?>>
                                 <a href="/assignments/thePitCrew">PHP Database Interaction (The Pit Crew Automotive)</a>
                             </li>
-<!--                            <li>
-                                <a href="sidebar.php">Assignment 2</a>
-                            </li>-->
+                            <li <?php if ($page == "databaseModify"){echo "class='active'";}?>>
+                                <a href="/assignments/thePitCrew/databaseModification.php">PHP Database Modification (The Pit Crew Automotive)</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

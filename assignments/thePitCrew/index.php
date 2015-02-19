@@ -43,7 +43,7 @@ if(!$_SESSION){
             <div class="col-md-9">
                 <h3>PHP Database Interaction (<a href="http://www.thepitcrewautomotive.com" target="_blank">www.thepitcrewautomotive.com</a>)</h3>
                    
-                <iframe style="width: 100%; height: 800px; border: none;" src="http://thepitcrewautomotive.com/services/oil-changes/test-service/"/>
+                <iframe style="width: 100%; height: 800px; border: none;" src="http://thepitcrewautomotive.com/services/oil-changes/test-service/"></iframe>
                 
             </div>
         </div>

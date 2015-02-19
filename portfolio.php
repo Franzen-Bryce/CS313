@@ -49,7 +49,7 @@
                     <li>Built from the ground up without a framework</li>
                 </ul>
                 <a class="btn btn-danger danger-visit-site" href="http://www.thepitcrewautomotive.com" target="_blank">Visit Site</a>&nbsp;
-                <a class="btn btn-primary" href="portfolio-pitCrew.php">Learn More</a>
+                <!-- <a class="btn btn-primary" href="portfolio-pitCrew.php">Learn More</a> -->
             </div>
         </div>
         <!-- /.row -->
@@ -74,7 +74,7 @@
                     <li>Built from the ground up without a framework</li>
                 </ul>
                 <a class="btn btn-danger danger-visit-site" href="http://tally.franzenit.com" target="_blank">Visit Site</a>&nbsp;
-                <a class="btn btn-primary" href="portfolio-tally.php">Learn More</a>
+                <!-- <a class="btn btn-primary" href="portfolio-tally.php">Learn More</a> -->
             </div>
         </div>
         <!-- /.row -->
@@ -100,7 +100,7 @@
                     <li>Built from the ground up without a framework</li>
                 </ul>
                 <a class="btn btn-danger danger-visit-site" href="http://sabuworks.franzenit.com" target="_blank">Visit Site</a>&nbsp;
-                <a class="btn btn-primary" href="portfolio-sabuWorks.php">Learn More</a>
+                <!-- <a class="btn btn-primary" href="portfolio-sabuWorks.php">Learn More</a> -->
             </div>
         </div>
         <!-- /.row -->
@@ -117,7 +117,7 @@
                 <h4>HTML5, CSS3, JavaScript, PHP</h4>
                 <p>Amanda Conley Photography is a site hosted through zenfolio.com, and custom web forms are not supported in their drag and drop design.  Amanda Conley contacted me to create custom web forms that would match her site's style scheme.  These web forms are hosted through my domain and included into her site through the implementation of iFrames.</p>
                 <a class="btn btn-danger danger-visit-site" href="http://www.amandaconleyphotography.com/senior-questionnaire" target="_blank">Visit Site</a>&nbsp;
-                <a class="btn btn-primary" href="portfolio-amandaConley.php">Learn More</a>
+                <!-- <a class="btn btn-primary" href="portfolio-amandaConley.php">Learn More</a> -->
             </div>
         </div>
         <!-- /.row -->

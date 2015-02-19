@@ -12,9 +12,9 @@ if(!$_SESSION){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Bryce Franzen - Assignment 1</title>
+    <meta name="description" content="Simple PHP Survey">
+    <meta name="author" content="Bryce Franzen">
+    <title>Bryce Franzen - Survey</title>
     <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/cssLinks.php'; ?>
 </head>
 <body>
