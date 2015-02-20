@@ -41,14 +41,20 @@ if(!$_SESSION){
             
             <!-- Content Column -->
             <div class="col-md-9">
-                <h3>PHP Database Interaction (<a href="http://www.thepitcrewautomotive.com" target="_blank">www.thepitcrewautomotive.com</a>)</h3>
-                   
+                <h3>PHP Database Interaction (<a href="http://www.thepitcrewautomotive.com/services/trico-view/#customerReviews" target="_blank">www.thepitcrewautomotive.com</a>)</h3>
+                <h4>Project:</h4>
+                <p>For this project I created a customer comment interface for The Pit Crew Automotive's website.  I included this comment interface on each service page of the site and built an administrator panel to manage customer comments.</p>
+                <br>
+                <h4>Comment Interface:</h4>
                 <iframe style="width: 100%; height: 800px; border: none;" src="http://thepitcrewautomotive.com/services/oil-changes/test-service/"></iframe>
-                
+                <br><br>
+                <h4>Administrator Control Panel:</h4>
+                <img class="img-responsive" src="/images/portfolio/thePitCrewAutomotive/pendingReviews.png" alt="The Pit Crew Automotive Pending Reviews Image" />
+                <br>
+                <img class="img-responsive" src="/images/portfolio/thePitCrewAutomotive/activeReviews.png" alt="The Pit Crew Automotive Active Reviews Image" />
             </div>
         </div>
         <!-- /.row -->
-
         <hr>
 
     </div>

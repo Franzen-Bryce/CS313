@@ -15,23 +15,23 @@ function verifyPassword($password, $passwordHash){
 //check user name
 if ($_GET['action'] == "login"){
 
-$username = asdflkjasdflkj
-$pswd = lsdalfkjsalkf
+$username = asdflkjasdflkj;
+$pswd = lsdalfkjsalkf;
 
 $databasePswd = getPswd($username);
 
 if (verifyPassword($pswd, $databasePswd)){
-	sldkfj
+	sldkfj;
 }
 else {
-	sdlfkj
+	sdlfkj;
 }
 
 }
 
 if ($_GET['action'] == "create"){
 
-$username = asdflkjasdflkj
+$username = asdflkjasdflkj;
 $pswd = getHashedPassword(lsdalfkjsalkf);
 
 

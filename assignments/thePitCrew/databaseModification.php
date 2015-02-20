@@ -62,6 +62,12 @@ if(!$_SESSION){
 	                <div class="col-md-4"><p><b>Username:</b> limitedAdmin</p></div>
     				<div class="col-md-4"><p><b>Password:</b> limitedAccess</p></div>
                 </div>
+                <div class="row">
+                <h4>Administrator Control Panel Screenshots:</h4>
+                <img class="img-responsive" src="/images/portfolio/thePitCrewAutomotive/pendingReviews.png" alt="The Pit Crew Automotive Pending Reviews Image" />
+                <br>
+                <img class="img-responsive" src="/images/portfolio/thePitCrewAutomotive/activeReviews.png" alt="The Pit Crew Automotive Active Reviews Image" />
+                </div>
             </div>
         </div>
         <!-- /.row -->
