@@ -22,7 +22,7 @@ if ($_POST['action']== "review"){
 		}
 	$serviceId = verifyInt($_POST['serviceId']);
 	$date = date('Y-m-d');
-	$url = $_POST['pageURL'];
+	$url = $_POST['pageURL'] . "#customerReviews";
 
 	if (isset($errors)) {
 		$_SESSION['errors'] = "<b><u>All Fields Required</u></b><br />" . $errors;
@@ -36,6 +36,7 @@ if ($_POST['action']== "review"){
 		$databaseUpdate = insertReview($name, $rating, $review, $date, $serviceId);
 
 		if ($databaseUpdate){
+			emailReviewUpdate();
 			$_SESSION['success'] = TRUE;
 			header ("Location: $url");
 			exit;
@@ -58,7 +59,7 @@ $serviceName = getServiceName($serviceId);
 // serviceReviews = reviewName, reviewDate, ReviewText
 
 //STYLE OUTPUT FOR WEB PAGE
-$output .= "<div class='col-md-8' style='padding-top: 5px; background-color: #F2F2F2; border-radius: 5px 5px 5px 5px;'>"
+$output .= "<div class='col-md-8' id='customerReviews' style='padding-top: 5px; background-color: #F2F2F2; border-radius: 5px 5px 5px 5px;'>"
 		."<h3 style='color: #000; text-align: left;'><span style='color: #BE1D2D'>Customer Reviews:</span> $serviceName[0]</h3>"
 		. "<div style='background: #fff; padding: 10px; margin-bottom: 25px; border-radius: 2px;'>";
 
@@ -94,7 +95,7 @@ $output .= "<div class='col-md-8' style='padding-top: 5px; background-color: #F2
 $output .= "</div>"
 		."<div class='col-md-12' style='padding: 0px 0px 20px 0px;'>";
 	if ($_SESSION['success']) {
-		$output .= "<h4 style='margin: 0px 0px 30px 0px; text-align: left;'>Thank You. Your review has successfully been submitted for review by management.</h4>";
+		$output .= "<h4 style='margin: 0px 0px 30px 0px; text-align: left;'>Thank You. Your review has successfully been submitted for approval by management.</h4>";
 	}
 	else {
 		$output .= "<div id='message' style='clear: both;'>" . $_SESSION['errors'] . "</div><h4 style='margin: 30px 0px;'>Write a Review:</h4>"
@@ -136,7 +137,8 @@ $output .= "</div>"
             </form>";
         }
 $output .= "</div> <!-- col-md-12 -->"
- 		."</div> <!--Close Main Review Form-->";
+ 		."</div> <!--Close Main Review Form-->"
+ 		."<button id='reviewsLink'><i class='fa fa-comments fa-inverse'></i>&nbsp;Reviews</button>";
 
 unset($_SESSION['errors']);
 unset($_SESSION['success']);
