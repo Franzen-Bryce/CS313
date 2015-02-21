@@ -4,7 +4,7 @@ date_default_timezone_set("America/Los_Angeles");
 if(!$_SESSION){
    session_start();
 }
-if (!$_SESSION['############'] == ############## ){
+if (!$_SESSION['############'] == "##############" ){
         // not logged in move to login page
         header('Location: /coupons/adminLogin.php');
         exit;

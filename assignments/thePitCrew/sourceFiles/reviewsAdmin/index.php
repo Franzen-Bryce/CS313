@@ -4,7 +4,7 @@ date_default_timezone_set("America/Los_Angeles");
 if(!$_SESSION){
     session_start();
  }
- if (!$_SESSION['##############'] == ##############){
+ if (!$_SESSION['#############'] == "##########"){
          // not logged in move to login page
          header('Location: /coupons/adminLogin.php');
          exit;
@@ -12,9 +12,50 @@ if(!$_SESSION){
 
 require $_SERVER['DOCUMENT_ROOT'].'/admin/model.php';
 
-
+//REVIEWS _____________________________________________________________________________
 if($_GET['action']=='editReviews'){
-    $reviews = getActiveReviews();
+    if ((!isset($_SESSION['reviewsSortService'])) || ($_SESSION['reviewsSortService'] == "none")){
+        $service_id = "9999 OR 1 = 1";
+    }
+        else {
+            $service_id = $_SESSION['reviewsSortService'];
+        }
+    if ((!isset($_SESSION['reviewsSortRating'])) || ($_SESSION['reviewsSortRating'] == "none")){
+        $reviewRating = "6 OR 1 = 1";
+    }
+        else {
+            switch ($_SESSION['reviewsSortRating']) {
+                    case '1star': $reviewRating = "1";
+                        break;
+                    case '2stars': $reviewRating = "2";
+                        break;
+                    case '3stars': $reviewRating = "3";
+                        break;
+                    case '4stars': $reviewRating = "4";
+                        break;
+                    case '5stars': $reviewRating = "5";
+                        break;
+                }
+        }
+    if ((!isset($_SESSION['reviewsSortDate'])) || ($_SESSION['reviewsSortDate'] == "DESC")){
+        $direction = "DESC";
+    }
+        else {
+            $direction = "ASC";
+        }
+
+    $reviews = reviewSort($service_id, $reviewRating, $direction);
+
+    $activeServices = getActiveReviewServices();
+    $reviewServices = "";
+        foreach ($activeServices as $value) {
+            if ($_SESSION['reviewsSortService'] == $value[0]){
+                $reviewServices .= "<option value='$value[0]' selected>$value[1]</option>";
+            }
+            else {
+                $reviewServices .= "<option value='$value[0]'>$value[1]</option>";
+            }
+        }
     $page = "activeReviews";
     if($reviews){
         $output = "";
@@ -45,14 +86,14 @@ if($_GET['action']=='editReviews'){
                                 ."$value[5]"
                             ."</div>"
                             ."<div class='col-md-1'>"
-                                ."<a href='?action=deleteReview&id=$value[0]&page=$page'><button class='btn btn-danger' style='margin-bottom: 5px;'>Permanently Delete</button></a>"
+                                ."<a href='?action=deleteReview&id=$value[0]&page=$page' onClick=\"return confirm('Are you sure you want to delete this review?')\"><button class='btn btn-danger' style='margin-bottom: 5px;'>Permanently Delete</button></a>"
                             ."</div>"
                         ."</div>";
             $stars = "";
         }
     }
     else {
-        $_SESSION['message'] = "There was an error retrieving reviews";
+        $_SESSION['message'] = "No Reviews Found";
     }
 
     include "reviews/editReviews.php";
@@ -91,7 +132,7 @@ if($_GET['action']=='pendingReviews'){
                             ."</div>"
                             ."<div class='col-md-1' style='padding-bottom: 10px;'>"
                                 ."<a href='?action=approveReview&id=$value[0]'><button class='btn btn-success' style='margin-bottom: 10px;'>Approve</button></a><br>"
-                                ."<a href='?action=deleteReview&id=$value[0]'><button class='btn btn-danger'>Delete</button></a>"
+                                ."<a href='?action=deleteReview&id=$value[0]' onClick=\"return confirm('Are you sure you want to delete this review?')\"><button class='btn btn-danger'>Delete</button></a>"
                             ."</div>"
                         ."</div>";
             $stars = "";
@@ -112,7 +153,12 @@ if ($_GET['action']=="approveReview") {
         $_SESSION['message'] = "Review Approved Successfully";
     }
     else{
-        $_SESSION['message'] = "Error Approving Review";
+        if ($_SESSION['username'] == "limitedAdmin"){
+            $_SESSION['message']= "Error. Insufficient Privileges.";
+        }
+        else{
+            $_SESSION['message'] = "Error Approving Review";
+        }
     }   
     header ('Location: /admin/.?action=pendingReviews');
     exit;
@@ -127,7 +173,12 @@ if ($_GET['action']=="deleteReview") {
         $_SESSION['message'] = "Review deleted successfully";
     }
     else{
-        $_SESSION['message'] = "Error deleting review";
+        if ($_SESSION['username'] == "limitedAdmin"){
+            $_SESSION['message']= "Error. Insufficient Privileges.";
+        }
+        else{
+            $_SESSION['message'] = "Error deleting review";
+        }
     }   
 
     if ($page == "activeReviews"){
@@ -139,6 +190,37 @@ if ($_GET['action']=="deleteReview") {
         exit;
     }   
 }
+
+if ($_POST['reviewsSortService']){
+    $_SESSION['reviewsSortService'] = verifyString($_POST['reviewsSortService']);
+
+    header ('Location: /admin/.?action=editReviews');
+    exit;
+}
+
+if ($_POST['reviewsSortDate']){
+        $_SESSION['reviewsSortDate'] = verifyString($_POST['reviewsSortDate']);
+
+    header ('Location: /admin/.?action=editReviews');
+    exit;
+}
+
+if ($_POST['reviewsSortRating']){
+        $_SESSION['reviewsSortRating'] = verifyString($_POST['reviewsSortRating']);
+
+    header ('Location: /admin/.?action=editReviews');
+    exit;
+}
+
+if ($_GET['action'] == "removeSortVariables"){
+    unset($_SESSION['reviewsSortRating']);
+    unset($_SESSION['reviewsSortDate']);
+    unset($_SESSION['reviewsSortService']);
+
+    header ('Location: /admin/.?action=editReviews');
+    exit;
+}
+
 
 //IF NOTHING ELSE -- GO HERE...
 else {

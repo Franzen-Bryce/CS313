@@ -14,7 +14,7 @@ function getPendingReviews(){
     $conn = databaseConnection();
    
     try{
-        $sql = "SELECT r.#########, r.#########, r.########, r.#########, r.#########, s.########, r.######## FROM ####### r JOIN ######## s ON r.############ = s.############# WHERE r.######## = # ORDER BY r.#########";
+        $sql = "SELECT r.review_id, r.reviewName, r.reviewDate, r.reviewText, r.reviewRating, s.serviceName, r.reviewApproved FROM reviews r JOIN services s ON r.service_id = s.service_id WHERE r.reviewApproved = 0 ORDER BY r.reviewDate";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetchAll();
@@ -34,35 +34,11 @@ function getPendingReviews(){
     }
 }
 
-function getActiveReviews(){
-    $conn = databaseConnection();
-   
-    try{
-        $sql = "SELECT r.#####, r.#######, r.########, r.###########, r.#########, s.#########, r.######## FROM ######### r JOIN ########## s ON r.####### = s.####### WHERE r.########## = 1 AND s.########### != ## ORDER BY r.######## DESC";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $data = $stmt->fetchAll();
-        $stmt->closeCursor();    
-    } 
-    catch (PDOException $ex) {
-        $_SESSION['errors'] = "There was an error with getActiveReviews()";
-        header ('Location: /?action=editReviews');
-        exit;
-    }
-    
-    if(is_array($data)){
-        return $data;
-    }
-    else {
-        return FALSE;
-    }
-}
-
 function approveReview($id){
     $conn = databaseConnection();
     
     try{
-      $sql = 'UPDATE ####### SET ############ = # WHERE #########= :id LIMIT 1';
+      $sql = 'UPDATE reviews SET reviewApproved = 1 WHERE review_id= :id LIMIT 1';
         
       $stmt = $conn->prepare($sql);
       $stmt->bindValue(':id', $id, PDO::PARAM_INT);
@@ -86,7 +62,7 @@ function approveReview($id){
 function deleteReview($id){
     $conn = databaseConnection();
     try{
-        $sql='DELETE FROM ###### WHERE ########= :id';
+        $sql='DELETE FROM reviews WHERE review_id= :id';
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -103,4 +79,52 @@ function deleteReview($id){
         else{
             return FALSE;
         }
+}
+
+function getActiveReviewServices(){
+    $conn = databaseConnection();
+   
+    try{
+        $sql = "SELECT DISTINCT s.service_id, s.serviceName FROM reviews r JOIN services s ON r.service_id = s.service_id WHERE r.reviewApproved = 1 AND s.service_id != 13 ORDER BY s.serviceName ASC";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        $stmt->closeCursor();    
+    } 
+    catch (PDOException $ex) {
+        $_SESSION['errors'] = "There was an error with getActiveReviewServices()";
+        header ('Location: /?action=editReviews');
+        exit;
+    }
+    
+    if(is_array($data)){
+        return $data;
+    }
+    else {
+        return FALSE;
+    }
+}
+
+function reviewSort($service_id, $reviewRating, $direction){
+    //Did not use BindValue because it does not allow SQL Injection, and I am doing that on purpose here...
+    $conn = databaseConnection();
+    try{
+        $sql = "SELECT r.review_id, r.reviewName, r.reviewDate, r.reviewText, r.reviewRating, s.serviceName, r.reviewApproved FROM reviews r JOIN services s ON r.service_id = s.service_id WHERE (r.reviewRating = $reviewRating) AND r.reviewApproved = 1 AND s.service_id != 13 AND (s.service_id = $service_id) ORDER BY r.reviewDate $direction";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        $stmt->closeCursor();    
+    } 
+    catch (PDOException $ex) {
+        $_SESSION['errors'] = "There was an error with sortReviewsByStars()";
+        header ('Location: /?action=editReviews');
+        exit;
+    }
+    
+    if(is_array($data)){
+        return $data;
+    }
+    else {
+        return FALSE;
+    }
 }

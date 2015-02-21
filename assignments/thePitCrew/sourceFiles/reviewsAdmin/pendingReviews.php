@@ -7,7 +7,7 @@ if(!$_SESSION){
 $page = "customerReviews"; 
 $subPage = "pendingReviews";
 
-if (!$_SESSION['###################'] == ################### ){
+if (!$_SESSION['#########'] == "############" ){
         // not logged in move to login page
         header('Location: /coupons/adminLogin.php');
         exit;
